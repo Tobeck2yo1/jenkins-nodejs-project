@@ -1,0 +1,21 @@
+{
+  "name": "jenkins-nodejs-project",
+  "version": "1.0.0",
+  "description": "Node.js application demonstrating a Jenkins CI/CD pipeline",
+  "main": "src/calculator.js",
+  "scripts": {
+    "build": "node -e \"require('./src/calculator.js'); console.log('Application build completed successfully')\"",
+    "test": "jest --ci --runInBand",
+    "package": "mkdir -p dist && tar --exclude='./dist' --exclude='./node_modules' --exclude='./.git' -czf dist/jenkins-nodejs-project.tar.gz ."
+  },
+  "keywords": [
+    "jenkins",
+    "nodejs",
+    "ci-cd"
+  ],
+  "author": "Oluwatobi Oguntuyo",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}
